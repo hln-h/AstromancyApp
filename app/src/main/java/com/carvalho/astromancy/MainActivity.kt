@@ -21,12 +21,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        fun getRetrofit(): Retrofit {
-            return Retrofit.Builder()
-                .baseUrl("https://divineapi.com/api/1.0/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
+        binding?.btnCompatibility?.setOnClickListener {
+            val intent = Intent(this, TarotActivity::class.java)
+            startActivity(intent)
         }
+
 
     }
 }

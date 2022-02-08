@@ -1,4 +1,4 @@
 package com.carvalho.astromancy
 
-class DailyTarot {
+class HoroscopeActivity {
 }
