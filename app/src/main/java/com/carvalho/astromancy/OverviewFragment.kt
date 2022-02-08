@@ -27,6 +27,7 @@ private lateinit var binding: FragmentOverviewBinding
         }
 
         binding.pager.adapter = pagerAdapter
+        binding.pager.post { binding.pager.setCurrentItem(1,true) }
     }
 
     private fun getDayString(pos: Int) = when(pos) {
