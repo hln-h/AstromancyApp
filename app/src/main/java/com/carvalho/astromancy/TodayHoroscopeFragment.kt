@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class TodayHoroscopeFragment(val starsign: String, var day: String) :
+class TodayHoroscopeFragment(val starsign: String, val day: String) :
     Fragment(R.layout.fragment_today_horoscope) {
 
     private lateinit var binding: FragmentTodayHoroscopeBinding
@@ -18,17 +18,17 @@ class TodayHoroscopeFragment(val starsign: String, var day: String) :
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
-        binding?.btnTomorrow?.setOnClickListener() {
-            var starsign = starsign
-            (activity as MainActivity).loadHoroscopeTomorrow(starsign, day)
-        }
+//        binding?.btnTomorrow?.setOnClickListener() {
+//            var starsign = starsign
+//            (activity as MainActivity).loadHoroscopeTomorrow(starsign, day)
+//        }
+//
+//        binding?.btnYesterday?.setOnClickListener() {
+//            var starsign = starsign
+//            (activity as MainActivity).loadHoroscopeYesterday(starsign, day)
+//        }
 
-        binding?.btnYesterday?.setOnClickListener() {
-            var starsign = starsign
-            (activity as MainActivity).loadHoroscopeYesterday(starsign, day)
-        }
-
-        day = "today"
+        //day = "today"
         fetchData(starsign, day)
 
 
