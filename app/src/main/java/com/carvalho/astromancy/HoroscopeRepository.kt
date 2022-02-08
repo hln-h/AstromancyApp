@@ -14,8 +14,8 @@ class HoroscopeRepository {
         return Retrofit.Builder().baseUrl(BASEURL).addConverterFactory(GsonConverterFactory.create()).build()
     }
 
-    fun getTodaysHoroscope(starsign: String): HoroscopeResponseModel? {
-        val response = service.getTodayHoroscope("${starsign}", "today").execute()
+    fun getTodaysHoroscope(starsign: String, day:String): HoroscopeResponseModel? {
+        val response = service.getTodayHoroscope("${starsign}", "${day}").execute()
         return if (response.isSuccessful) {
             response.body()
         } else {

@@ -3,7 +3,6 @@ package com.carvalho.astromancy
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.carvalho.astromancy.databinding.FragmentHomeButtonsBinding
 import com.carvalho.astromancy.databinding.FragmentHoroscopeMainBinding
 
 class HoroscopeMainFragment:Fragment(R.layout.fragment_horoscope_main) {
@@ -15,7 +14,8 @@ class HoroscopeMainFragment:Fragment(R.layout.fragment_horoscope_main) {
         binding = FragmentHoroscopeMainBinding.bind(view)
         binding?.btnShowHoroscope?.setOnClickListener() {
             var starsign = binding?.etStarsign?.getText().toString()
-            (activity as MainActivity).loadHoroscopeToday(starsign)
+            var day = "today"
+            (activity as MainActivity).loadHoroscopeToday(starsign, day)
 
     }
 }}

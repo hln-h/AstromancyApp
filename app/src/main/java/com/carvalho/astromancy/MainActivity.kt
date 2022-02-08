@@ -36,12 +36,29 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun loadHoroscopeToday(starsign:String) {
+    fun loadHoroscopeToday(starsign: String, day: String) {
         val transaction = supportFragmentManager.beginTransaction()
-        val horoscopeMain = TodayHoroscopeFragment(starsign)
+        val horoscopeToday = TodayHoroscopeFragment(starsign, day)
         val mainLayoutId = R.id.fragment_container
-        transaction.add(mainLayoutId, horoscopeMain, "horoscopeToday")
+        transaction.add(mainLayoutId, horoscopeToday, "horoscopeToday")
         transaction.commit()
+    }
+
+    fun loadHoroscopeTomorrow(starsign: String, day: String) {
+        val transaction = supportFragmentManager.beginTransaction()
+        val horoscopeTomorrow = TomorrowHoroscopeFragment(starsign, day)
+        val mainLayoutId = R.id.fragment_container
+        transaction.add(mainLayoutId, horoscopeTomorrow, "horoscopeTomorrow")
+        transaction.commit()
+    }
+
+    fun loadHoroscopeYesterday(starsign: String, day: String) {
+        val transaction = supportFragmentManager.beginTransaction()
+        val horoscopeYesterday = YesterdayHoroscopeFragment(starsign, day)
+        val mainLayoutId = R.id.fragment_container
+        transaction.add(mainLayoutId, horoscopeYesterday, "horoscopeYesterday")
+        transaction.commit()
+
     }
 
 
