@@ -18,10 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        binding?.btnCompatibility?.setOnClickListener {
-            val intent = Intent(this, TarotActivity::class.java)
-            startActivity(intent)
-        }
+
 
         loadButtons()
 
@@ -53,6 +50,11 @@ class MainActivity : AppCompatActivity() {
         val mainLayoutId = R.id.fragment_container
         transaction.add(mainLayoutId, horoscopeToday, "horoscopeToday")
         transaction.commit()
+    }
+
+    fun loadTarotActivity() {
+        val intent = Intent(this, TarotActivity::class.java)
+        startActivity(intent)
     }
 
 //    fun loadHoroscopeTomorrow(starsign: String, day: String) {
