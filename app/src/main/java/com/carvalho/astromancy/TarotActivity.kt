@@ -1,10 +1,10 @@
 package com.carvalho.astromancy
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.carvalho.astromancy.databinding.TarotActivityBinding
 import com.carvalho.astromancy.model_tarotapi.ResponseRootModel
+import com.carvalho.astromancy.model_tarotapi.TarotRequestModel
 import com.carvalho.astromancy.model_tarotapi.TarotService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -26,7 +26,7 @@ class TarotActivity: AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 val response = getTarotAnswer()
                 withContext(Dispatchers.Main) {
-                    binding?.test?.text="${response?.data}"
+                    binding?.test?.text="${response}"
                 }
                 }
             }
@@ -43,7 +43,8 @@ class TarotActivity: AppCompatActivity() {
     }
 
     private fun getTarotAnswer(): ResponseRootModel? {
-        val response = service.GetDailyTarot("8bf1211fd4b7b94528899de0a43b9fb3").execute()
+        val request = TarotRequestModel("8bf1211fd4b7b94528899de0a43b9fb3")
+        val response = service.getDailyTarot(request).execute()
         return if (response.isSuccessful) {
             response.body()
             null

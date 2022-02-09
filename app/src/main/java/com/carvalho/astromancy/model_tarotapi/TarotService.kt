@@ -1,13 +1,13 @@
 package com.carvalho.astromancy.model_tarotapi
 
 import retrofit2.Call
-import retrofit2.Response
-import retrofit2.http.*
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface TarotService {
 
-    @POST("get_yes_or_no_tarot.php?")
-    fun GetDailyTarot (@Body api_key:String):Call<ResponseRootModel>
+    @POST("get_yes_or_no_tarot.php")
+    fun getDailyTarot(@Body requestModel: TarotRequestModel): Call<ResponseRootModel>
 
 }
 
