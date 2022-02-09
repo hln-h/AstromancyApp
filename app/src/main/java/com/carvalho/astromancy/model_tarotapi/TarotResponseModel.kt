@@ -2,11 +2,16 @@ package com.carvalho.astromancy.model_tarotapi
 
 import com.google.gson.annotations.SerializedName
 
+data class TarotRequestModel(
+    @SerializedName("api_key")
+    val api_key: String
+    )
 
-data class ResponseRootModel (val data:ArrayList<TarotResponseModel>, val success:Int)
+
+data class ResponseRootModel(val success: Int, val message: String)
 
 
-data class TarotResponseModel (
+data class TarotResponseModel(
     @SerializedName("card")
     var card: String,
     @SerializedName("category")
