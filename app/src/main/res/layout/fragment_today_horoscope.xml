@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background"
@@ -41,7 +41,8 @@
             android:minHeight="10dp"
             android:padding="5dp"
             android:textColor="@color/textColor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textAlignment="center"/>
 
         <TextView
             android:id="@+id/tv_todaysHoroscope"
@@ -52,49 +53,16 @@
             android:padding="5dp"
             android:textColor="@color/textColor"
             android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:textAlignment="center"/>
 
 
         <TableLayout
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:padding="5dp">
-
-            <TableRow>
-
-                <TextView
-                    android:padding="3dp"
-                    android:text="Compatibility"
-                    android:textColor="@color/lavander"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_compatibility"
-                    android:padding="3dp"
-                    android:textColor="@color/textColor"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:padding="3dp"
-                    android:text="Mood"
-                    android:textColor="@color/lavander"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_mood"
-                    android:padding="3dp"
-                    android:textColor="@color/textColor"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
-            </TableRow>
-
+            android:padding="5dp"
+            android:layout_gravity="center">
             <TableRow>
 
                 <TextView
@@ -102,15 +70,20 @@
                     android:text="Color"
                     android:textColor="@color/lavander"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:textAlignment="textEnd"
+                    />
 
                 <TextView
                     android:id="@+id/tv_color"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:layout_width="150dp"/>
             </TableRow>
+
 
             <TableRow>
 
@@ -119,16 +92,42 @@
                     android:text="Lucky Number"
                     android:textColor="@color/lavander"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:textAlignment="textEnd"
+                    />
 
                 <TextView
                     android:id="@+id/tv_number"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:layout_width="150dp"/>
             </TableRow>
 
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="Compatibility"
+                    android:textColor="@color/lavander"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:textAlignment="textEnd"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_compatibility"
+                    android:padding="3dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:layout_width="150dp"
+                    />
+            </TableRow>
             <TableRow>
 
                 <TextView
@@ -136,15 +135,42 @@
                     android:text="Lucky Time"
                     android:textColor="@color/lavander"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:textAlignment="textEnd"
+                    />
 
                 <TextView
                     android:id="@+id/tv_time"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:layout_width="150dp"/>
             </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="Mood"
+                    android:textColor="@color/lavander"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:textAlignment="textEnd"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_mood"
+                    android:padding="3dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:layout_width="150dp"/>
+            </TableRow>
+
+
+
 
 
         </TableLayout>
