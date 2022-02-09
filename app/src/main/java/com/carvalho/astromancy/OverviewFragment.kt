@@ -31,8 +31,8 @@ private lateinit var binding: FragmentOverviewBinding
     }
 
     private fun getDayString(pos: Int) = when(pos) {
-        2 -> "tomorrow"
-        1 -> "today"
-        else -> "yesterday"
+        2 -> "Tomorrow"
+        1 -> "Today"
+        else -> "Yesterday"
     }
 }
