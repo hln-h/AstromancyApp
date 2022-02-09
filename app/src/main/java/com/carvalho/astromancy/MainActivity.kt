@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
 
-        binding?.btnHoroscope?.setOnClickListener() {
-            val intent = Intent(this, HoroscopeActivity::class.java)
-            startActivity(intent)
-        }
+
+
+
+
 
         binding?.btnCompatibility?.setOnClickListener {
             val intent = Intent(this, TarotActivity::class.java)

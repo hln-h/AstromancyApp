@@ -3,7 +3,7 @@ package com.carvalho.astromancy.model_tarotapi
 import com.google.gson.annotations.SerializedName
 
 
-data class ResponseRootModel (val data:TarotResponseModel, val success:Int)
+data class ResponseRootModel (val data:ArrayList<TarotResponseModel>, val success:Int)
 
 
 data class TarotResponseModel (

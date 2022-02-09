@@ -46,8 +46,8 @@ class TarotActivity: AppCompatActivity() {
         val response = service.GetDailyTarot("8bf1211fd4b7b94528899de0a43b9fb3").execute()
         return if (response.isSuccessful) {
             response.body()
-            } else {
-            Log.e("HTTP ERROR TAG", "${response.errorBody()}")
+            null
+        } else {
             null
         }
     }

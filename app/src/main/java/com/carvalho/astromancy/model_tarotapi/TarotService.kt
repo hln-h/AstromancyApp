@@ -6,8 +6,7 @@ import retrofit2.http.*
 
 interface TarotService {
 
-    @POST("get_yes_or_no_tarot.php")
-    @Headers ("Content-Type: application/json")
+    @POST("get_yes_or_no_tarot.php?")
     fun GetDailyTarot (@Body api_key:String):Call<ResponseRootModel>
 
 }
