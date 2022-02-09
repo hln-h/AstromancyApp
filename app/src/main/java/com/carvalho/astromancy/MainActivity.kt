@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         loadButtons()
@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         val horoscopeMain = HoroscopeMainFragment()
         val mainLayoutId = R.id.fragment_container
         transaction.add(mainLayoutId, horoscopeMain, "horoscopeMain")
+        transaction.addToBackStack("horoscopeMain")
         transaction.commit()
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
 
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         val horoscopeToday = OverviewFragment(starsign, day)
         val mainLayoutId = R.id.fragment_container
         transaction.add(mainLayoutId, horoscopeToday, "horoscopeToday")
+        transaction.addToBackStack ("horoscopeToday")
         transaction.commit()
     }
 

@@ -2,6 +2,7 @@ package com.carvalho.astromancy
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.carvalho.astromancy.databinding.FragmentTodayHoroscopeBinding
 import kotlinx.coroutines.CoroutineScope
@@ -15,20 +16,12 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
     private lateinit var binding: FragmentTodayHoroscopeBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
-//        binding?.btnTomorrow?.setOnClickListener() {
-//            var starsign = starsign
-//            (activity as MainActivity).loadHoroscopeTomorrow(starsign, day)
-//        }
-//
-//        binding?.btnYesterday?.setOnClickListener() {
-//            var starsign = starsign
-//            (activity as MainActivity).loadHoroscopeYesterday(starsign, day)
-//        }
 
-        //day = "today"
         fetchData(starsign, day)
 
 
