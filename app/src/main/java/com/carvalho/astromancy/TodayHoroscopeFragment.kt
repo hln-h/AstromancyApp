@@ -39,10 +39,15 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
             val repo = HoroscopeRepository()
             val response = repo.getTodaysHoroscope(starsign, day)
             withContext(Dispatchers.Main) {
+                binding?.tvStarsign?.text = "${starsign}"
                 binding?.tvTodaysHoroscope?.text = "${response?.description}"
                 binding?.tvDate?.text = "${day}"
-                binding?.tvTodayDetails?.text =
-                    "Compatibility: ${response?.compatibility}; Mood: ${response?.mood}; Color: ${response?.color}; Lucky Number: ${response?.luckyNumber}, Lucky Time: ${response?.luckyTime}"
+                binding?.tvCompatibility?.text ="${response?.compatibility}"
+                binding?.tvMood?.text= "${response?.mood}"
+                binding?.tvColor?.text= "${response?.color}"
+                binding?.tvNumber?.text = "${response?.luckyNumber}"
+                binding?.tvTime?.text = "${response?.luckyTime}"
+
             }
         }
     }
