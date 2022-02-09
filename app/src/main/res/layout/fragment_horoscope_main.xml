@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,164 +12,197 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_starsign"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your starsign" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="What's your starsign?"
+       android:gravity="center"
+       android:textSize="20sp"
+       android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_aquarius"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Aquarius" />
+            android:text="Aquarius"
+            android:src="@drawable/aquarius"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_aries"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Aries" />
+            android:text="Aries"
+            android:src="@drawable/aries"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_cancer"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Cancer" />
+            android:text="Cancer"
+            android:src="@drawable/cancer"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_capricorn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Capricorn" />
+            android:text="Capricorn"
+            android:src="@drawable/capricorn"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_gemini"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Gemini" />
+            android:text="Gemini"
+            android:src="@drawable/gemini"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_leo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Leo" />
+            android:text="Leo"
+            android:src="@drawable/leo"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_libra"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Libra" />
+            android:text="Libra"
+            android:src="@drawable/libra"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_pisces"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Pisces" />
+            android:text="Pisces"
+            android:src="@drawable/pisces"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_sagittarius"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Sagittarius" />
+            android:text="Sagittarius"
+            android:src="@drawable/saggitarius"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_scorpio"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Scorpio" />
+            android:text="Scorpio"
+            android:src="@drawable/scorpio"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_taurus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Taurus" />
+            android:text="Taurus"
+            android:src="@drawable/taurus"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_virgo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Virgo" />
+            android:text="Virgo"
+            android:src="@drawable/virgo"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_showHoroscope"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily Horoscope"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
@@ -173,3 +211,5 @@
 
 
 </LinearLayout>
+
+</ScrollView>
