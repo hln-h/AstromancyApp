@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Astromancy">
+
+        <activity
+            android:name=".TarotActivity"
+            android:exported="false"/>
         <activity
             android:name=".HoroscopeActivity"
             android:exported="false" />
