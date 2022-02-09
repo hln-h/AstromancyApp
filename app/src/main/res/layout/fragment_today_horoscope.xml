@@ -2,47 +2,124 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_margin="10dp"
     android:background="@color/white"
+    android:orientation="vertical"
+
 
     >
+
     <TextView
         android:id="@+id/tv_starsign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="10dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="10dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        android:padding="5dp"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_todaysHoroscope"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="100dp"
+        android:padding="5dp"
         android:textSize="20sp"
-        android:textStyle="italic"
-        />
+        android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tv_today_details"
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="100dp"
-        android:textSize="15sp"
-        android:textStyle="normal"
-        />
+        android:padding="5dp">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dp"
+                android:text="Compatibility"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_compatibility"
+                android:padding="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dp"
+                android:text="Mood"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_mood"
+                android:padding="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dp"
+                android:text="Color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_color"
+                android:padding="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dp"
+                android:text="Lucky Number"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:padding="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dp"
+                android:text="Lucky Time"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:padding="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </TableRow>
 
 
+    </TableLayout>
 
 
 </LinearLayout>
