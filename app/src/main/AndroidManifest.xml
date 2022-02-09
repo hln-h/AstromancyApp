@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astromancy">
 
-        <activity
-            android:name=".TarotActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".HoroscopeActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
