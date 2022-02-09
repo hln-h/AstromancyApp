@@ -20,10 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/askAQuestion_txt"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
