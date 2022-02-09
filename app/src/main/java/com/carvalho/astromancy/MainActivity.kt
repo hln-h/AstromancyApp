@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.carvalho.astromancy.databinding.ActivityMainBinding
+import com.carvalho.astromancy.tarotFrags.TarotAnswer
+import com.carvalho.astromancy.tarotFrags.TarotQuestion
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun loadButtons() {
+     fun loadButtons() {
         val transaction = supportFragmentManager.beginTransaction()
         val horoscopeMain = ButtonFragment()
         val mainLayoutId = R.id.fragment_container
@@ -60,9 +62,25 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
+
+
+
+    fun getTarotAnswer() {
+        val transaction = supportFragmentManager.beginTransaction()
+        val answer = TarotAnswer()
+        val mainLayoutId = R.id.fragment_container
+        transaction.add(mainLayoutId, answer, "Tarot Answer")
+        transaction.addToBackStack ("Tarot Answer")
+        transaction.commit()
+    }
+
     fun loadTarotActivity() {
-        val intent = Intent(this, TarotActivity::class.java)
-        startActivity(intent)
+        val transaction = supportFragmentManager.beginTransaction()
+        val question = TarotQuestion()
+        val mainLayoutId = R.id.fragment_container
+        transaction.add(mainLayoutId, question, "Tarot Question")
+        transaction.addToBackStack ("Tarot Question")
+        transaction.commit()
     }
 
 //    fun loadHoroscopeTomorrow(starsign: String, day: String) {

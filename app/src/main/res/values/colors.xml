@@ -9,10 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lavander">#AE91FF</color>
     <color name="purpleBlue">#B3A2FF</color>
-    <color name="mauve">#cfbaf0</color>
+    <color name="toolbar">#cfbaf0</color>
     <color name="celeste1">#9bf6ff</color>
     <color name="celeste2">#c0fdff</color>
     <color name="cream">#fbf8cc</color>
-    <color name="almond">#fde4cf</color>
+    <color name="background">#fde4cf</color>
     <color name="sandyOrange">#ffaf74</color>
+    <color name="textColor">#393838</color>
 </resources>
