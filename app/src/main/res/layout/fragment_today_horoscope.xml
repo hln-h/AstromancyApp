@@ -37,17 +37,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc"
             android:minHeight="10dp"
             android:padding="5dp"
             android:textAlignment="center"
             android:textColor="@color/textColor"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/tv_todaysHoroscope"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/rajdhani"
             android:minHeight="100dp"
             android:padding="5dp"
             android:textAlignment="center"
@@ -66,16 +68,18 @@
 
                 <TextView
                     android:layout_width="150dp"
+                    android:fontFamily="@font/amatic_sc"
                     android:padding="3dp"
                     android:text="Color"
                     android:textAlignment="textEnd"
                     android:textColor="@color/lavander"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_color"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/rajdhani"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -86,16 +90,18 @@
 
                 <TextView
                     android:layout_width="150dp"
+                    android:fontFamily="@font/amatic_sc"
                     android:padding="3dp"
                     android:text="Lucky Number"
                     android:textAlignment="textEnd"
                     android:textColor="@color/lavander"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_number"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/rajdhani"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -106,16 +112,18 @@
 
                 <TextView
                     android:layout_width="150dp"
+                    android:fontFamily="@font/amatic_sc"
                     android:padding="3dp"
                     android:text="Compatibility"
                     android:textAlignment="textEnd"
                     android:textColor="@color/lavander"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_compatibility"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/rajdhani"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -126,16 +134,18 @@
 
                 <TextView
                     android:layout_width="150dp"
+                    android:fontFamily="@font/amatic_sc"
                     android:padding="3dp"
                     android:text="Lucky Time"
                     android:textAlignment="textEnd"
                     android:textColor="@color/lavander"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_time"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/rajdhani"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -146,16 +156,18 @@
 
                 <TextView
                     android:layout_width="150dp"
+                    android:fontFamily="@font/amatic_sc"
                     android:padding="3dp"
                     android:text="Mood"
                     android:textAlignment="textEnd"
                     android:textColor="@color/lavander"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_mood"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/rajdhani"
                     android:padding="3dp"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
