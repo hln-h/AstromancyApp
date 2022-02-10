@@ -14,9 +14,9 @@ class TarotQuestion:Fragment(R.layout.question_frag) {
         super.onViewCreated(view, savedInstanceState)
         binding = QuestionFragBinding.bind(view)
 
-        binding.goBackBtn.setOnClickListener {
+        binding.homeBtn.setOnClickListener {
             (activity as MainActivity).loadButtons()
-        }
+       }
 
         binding.askBtn.setOnClickListener {
             (activity as MainActivity).getTarotAnswer()
