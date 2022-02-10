@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.carvalho.astromancy.MainActivity
 import com.carvalho.astromancy.R
 import com.carvalho.astromancy.TarotRepository
 import com.carvalho.astromancy.databinding.AnswerFragBinding
@@ -21,7 +22,13 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
         super.onViewCreated(view, savedInstanceState)
         binding = AnswerFragBinding.bind(view)
 
+        binding.goBackBtn.setOnClickListener {
+            (activity as MainActivity).loadTarotActivity()
+        }
 
+        binding.homeBtn.setOnClickListener {
+            (activity as MainActivity).loadButtons()
+        }
             CoroutineScope(Dispatchers.IO).launch {
                 val repo = TarotRepository()
                 val response = repo.getTarotAnswer()
