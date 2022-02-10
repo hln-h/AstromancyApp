@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -55,13 +54,16 @@
         app:layout_constraintTop_toBottomOf="@+id/home_btn" />
 
     <TextView
-        android:layout_marginTop="10dp"
         android:id="@+id/tarot_cardName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quintessential"
+        android:textColor="@color/lavander"
         android:minWidth="300dp"
+        android:minHeight="20dp"
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tarot_img" />
@@ -69,25 +71,32 @@
     <TextView
         android:id="@+id/tarot_YesNo"
         android:layout_width="wrap_content"
-        android:minWidth="400dp"
         android:layout_height="wrap_content"
-        android:minHeight="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/rajdhani"
+        android:textColor="@color/black"
+        android:minWidth="400dp"
+        android:minHeight="20dp"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tarot_cardName"
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tarot_cardName" />
 
 
     <TextView
         android:id="@+id/tarot_answer"
         android:layout_width="wrap_content"
-        android:minHeight="200dp"
-        android:minWidth="350dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/rajdhani"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:minWidth="350dp"
+        android:minHeight="200dp"
         android:textAlignment="center"
+        android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tarot_YesNo" />

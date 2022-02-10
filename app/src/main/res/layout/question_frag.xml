@@ -28,23 +28,27 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"
         />
+
     <TextView
         android:id="@+id/askAQuestion_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
+        android:fontFamily="@font/quintessential"
         android:text="Ask a question"
-        android:textSize="30sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goBack_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/goBack_btn"
+        android:textColor="@color/sandyOrange"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/askQuestion_input"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="30dp"
+        android:fontFamily="@font/rajdhani"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/askAQuestion_txt" />
@@ -53,7 +57,9 @@
         android:id="@+id/ask_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/quintessential"
         android:text="Ask"
+        android:background="@color/lavander"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/askQuestion_input" />
