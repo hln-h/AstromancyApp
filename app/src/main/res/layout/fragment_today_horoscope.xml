@@ -25,6 +25,17 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/toolbar"
+            />
+
+
         <ImageView
             android:id="@+id/iv_starsign"
             android:layout_width="match_parent"
@@ -33,15 +44,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitCenter" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:visibility="visible"
-            android:layout_gravity="center"
-            android:indeterminateTint="@color/toolbar"
-            />
+
 
 
         <TextView
