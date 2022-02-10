@@ -28,13 +28,15 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"
         />
+
     <TextView
         android:id="@+id/askAQuestion_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
+        android:fontFamily="@font/amatic_sc"
         android:text="Ask a question"
-        android:textSize="30sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
