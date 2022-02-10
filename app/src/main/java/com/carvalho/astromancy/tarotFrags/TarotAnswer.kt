@@ -25,7 +25,7 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
                 val repo = TarotRepository()
                 val response = repo.getTarotAnswer()
                 withContext(Dispatchers.Main) {
-                    binding.tarotAnswer.text = "${response}"
+                    binding.tarotAnswer.text = "${response?.data?.card}"
                 }
             }
         }

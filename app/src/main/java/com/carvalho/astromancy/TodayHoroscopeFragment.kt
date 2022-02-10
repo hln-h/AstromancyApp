@@ -22,6 +22,7 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
 
+
         fetchData(starsign, day)
 
 

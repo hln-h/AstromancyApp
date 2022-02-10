@@ -17,8 +17,13 @@ private lateinit var binding: FragmentOverviewBinding
 
         binding = FragmentOverviewBinding.bind(view)
 
+        binding.goBackBtn.setOnClickListener {
+            (activity as MainActivity).loadHoroscopeMain()
+        }
 
-
+        binding.goHomeBtn.setOnClickListener {
+            (activity as MainActivity).loadButtons()
+        }
 
         val pagerAdapter = object: FragmentStateAdapter(this){
             override fun getItemCount(): Int {
@@ -40,6 +45,8 @@ private lateinit var binding: FragmentOverviewBinding
         TabLayoutMediator( binding.tabLayout, binding.pager) { tab, position ->
             tab.text = getDayString(position)
         }.attach()
+
+
     }
 
     private fun getDayString(pos: Int) = when(pos) {
