@@ -20,17 +20,14 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
-        setupProgressBar()
+        binding.progressBar.visibility = View.VISIBLE
 
         fetchData(starsign, day)
 
 
     }
 
-    private fun setupProgressBar() {
-        binding.progressBar.visibility = View.VISIBLE
 
-    }
 
 
     private fun fetchData(starsign: String, day: String) {

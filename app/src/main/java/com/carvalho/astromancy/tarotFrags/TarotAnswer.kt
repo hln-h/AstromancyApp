@@ -29,7 +29,9 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
         binding.homeBtn.setOnClickListener {
             (activity as MainActivity).loadButtons()
         }
-            CoroutineScope(Dispatchers.IO).launch {
+        binding.progressBar.visibility = View.VISIBLE
+
+        CoroutineScope(Dispatchers.IO).launch {
                 val repo = TarotRepository()
                 val response = repo.getTarotAnswer()
                 withContext(Dispatchers.Main) {
@@ -39,6 +41,8 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
                     Picasso.get().load("${response?.data?.cardImage}").into(binding.tarotImg)
 
                 }
-            }
+            binding.progressBar.visibility = View.GONE
+
+        }
         }
     }
