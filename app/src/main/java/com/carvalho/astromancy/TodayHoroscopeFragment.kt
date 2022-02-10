@@ -21,6 +21,7 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
         binding.progressBar.visibility = View.VISIBLE
+        binding.loadingMessage.visibility = View.VISIBLE
 
         fetchData(starsign, day)
 
@@ -63,6 +64,7 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
             }
 
             binding.progressBar.visibility = View.GONE
+            binding.loadingMessage.visibility = View.GONE
 
         }
 

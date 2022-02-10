@@ -30,6 +30,8 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
             (activity as MainActivity).loadButtons()
         }
         binding.progressBar.visibility = View.VISIBLE
+        binding.loadingMessage.visibility = View.VISIBLE
+
 
         CoroutineScope(Dispatchers.IO).launch {
                 val repo = TarotRepository()
@@ -42,6 +44,7 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
 
                 }
             binding.progressBar.visibility = View.GONE
+            binding.loadingMessage.visibility = View.GONE
 
         }
         }
