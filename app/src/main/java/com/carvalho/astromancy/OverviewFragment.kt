@@ -1,9 +1,9 @@
 package com.carvalho.astromancy
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.carvalho.astromancy.databinding.FragmentOverviewBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -11,6 +11,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class OverviewFragment (val starsign: String, var day: String): Fragment(R.layout.fragment_overview) {
 private lateinit var binding: FragmentOverviewBinding
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -24,6 +26,8 @@ private lateinit var binding: FragmentOverviewBinding
         binding.goHomeBtn.setOnClickListener {
             (activity as MainActivity).loadButtons()
         }
+
+
 
         val pagerAdapter = object: FragmentStateAdapter(this){
             override fun getItemCount(): Int {

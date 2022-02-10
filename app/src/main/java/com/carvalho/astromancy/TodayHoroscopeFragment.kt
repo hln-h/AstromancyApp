@@ -2,7 +2,6 @@ package com.carvalho.astromancy
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.carvalho.astromancy.databinding.FragmentTodayHoroscopeBinding
 import kotlinx.coroutines.CoroutineScope
@@ -21,12 +20,18 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTodayHoroscopeBinding.bind(view)
 
-
+        setupProgressBar()
 
         fetchData(starsign, day)
 
 
     }
+
+    private fun setupProgressBar() {
+        binding.progressBar.visibility = View.VISIBLE
+
+    }
+
 
     private fun fetchData(starsign: String, day: String) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -36,31 +41,35 @@ class TodayHoroscopeFragment(val starsign: String, val day: String) :
                 binding.tvStarsign.text = "${starsign}"
                 binding.tvTodaysHoroscope?.text = "${response?.description}"
                 binding.tvDate.text = "${day}"
-                binding.tvCompatibility?.text ="${response?.compatibility}"
-                binding.tvMood.text= "${response?.mood}"
-                binding.tvColor.text= "${response?.color}"
+                binding.tvCompatibility?.text = "${response?.compatibility}"
+                binding.tvMood.text = "${response?.mood}"
+                binding.tvColor.text = "${response?.color}"
                 binding.tvNumber.text = "${response?.luckyNumber}"
                 binding.tvTime.text = "${response?.luckyTime}"
 
-                binding.ivStarsign.setImageResource(when (starsign){
-                    "Aries"-> R.drawable.aries
-                    "Aquarius"->R.drawable.aquarius
-                    "Cancer" -> R.drawable.cancer
-                    "Gemini"->R.drawable.gemini
-                    "Leo"->R.drawable.leo
-                    "Libra"->R.drawable.libra
-                    "Pisces"->R.drawable.pisces
-                    "Sagittarius"->R.drawable.saggitarius
-                    "Scorpio"->R.drawable.scorpio
-                    "Taurus"->R.drawable.taurus
-                    "Virgo"->R.drawable.virgo
-                    else -> R.drawable.capricorn
-
-
-                }
+                binding.ivStarsign.setImageResource(
+                    when (starsign) {
+                        "Aries" -> R.drawable.aries
+                        "Aquarius" -> R.drawable.aquarius
+                        "Cancer" -> R.drawable.cancer
+                        "Gemini" -> R.drawable.gemini
+                        "Leo" -> R.drawable.leo
+                        "Libra" -> R.drawable.libra
+                        "Pisces" -> R.drawable.pisces
+                        "Sagittarius" -> R.drawable.saggitarius
+                        "Scorpio" -> R.drawable.scorpio
+                        "Taurus" -> R.drawable.taurus
+                        "Virgo" -> R.drawable.virgo
+                        else -> R.drawable.capricorn
+                    }
                 )
-
             }
+
+            binding.progressBar.visibility = View.GONE
+
         }
+
+
     }
+
 }

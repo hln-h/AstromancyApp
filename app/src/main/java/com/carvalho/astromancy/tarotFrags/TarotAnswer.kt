@@ -41,6 +41,4 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
                 }
             }
         }
-
     }
-
