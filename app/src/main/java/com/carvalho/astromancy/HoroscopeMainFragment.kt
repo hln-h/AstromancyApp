@@ -15,6 +15,10 @@ class HoroscopeMainFragment:Fragment(R.layout.fragment_horoscope_main)  {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHoroscopeMainBinding.bind(view)
 
+        binding.goHomeBtn.setOnClickListener {
+            (activity as MainActivity).loadButtons()
+        }
+
         binding?.btnAquarius?.setOnClickListener() {
             var starsign = "Aquarius"
             var day = "today"

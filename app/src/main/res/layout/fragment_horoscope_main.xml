@@ -4,6 +4,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
 <LinearLayout
 
     android:layout_width="match_parent"
@@ -11,10 +14,21 @@
     android:background="@color/background"
     android:orientation="vertical">
 
+    <ImageButton
+        android:id="@+id/goHome_btn"
+        android:layout_width="39dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_baseline_home_24"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="What's your starsign?"
+       android:text="Select your zodiac"
        android:gravity="center"
        android:textSize="35sp"
        android:textColor="@color/textColor"
