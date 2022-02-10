@@ -19,6 +19,7 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_url="https://assets3.lottiefiles.com/packages/lf20_Aerz0y.json" />
+
     <ImageButton
         android:id="@+id/goHome_btn"
         android:layout_width="wrap_content"
@@ -45,7 +46,6 @@
 
 
 
-
 <com.google.android.material.tabs.TabLayout
     android:id="@+id/tabLayout"
     android:layout_width="match_parent"
@@ -62,8 +62,8 @@
     />
 
 
+
     <androidx.viewpager2.widget.ViewPager2
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -71,5 +71,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        />
+        >
+
+
+    </androidx.viewpager2.widget.ViewPager2>
 </androidx.constraintlayout.widget.ConstraintLayout>
