@@ -14,13 +14,11 @@ data class ResponseRootModel(val data:TarotResponseModel)
 data class TarotResponseModel(
     @SerializedName("card")
     var card: String,
-    @SerializedName("category")
-    var category: String, //reversed or not
     @SerializedName("yes_no")
     var yesno: String, //yes or no answer
     @SerializedName("result")
     var result: String, //tarot message
-    @SerializedName("image2")
+    @SerializedName("image")
     var cardImage: String
 
 )

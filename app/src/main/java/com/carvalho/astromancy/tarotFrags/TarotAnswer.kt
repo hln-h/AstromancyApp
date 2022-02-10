@@ -1,12 +1,13 @@
 package com.carvalho.astromancy.tarotFrags
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.carvalho.astromancy.HoroscopeRepository
 import com.carvalho.astromancy.R
 import com.carvalho.astromancy.TarotRepository
 import com.carvalho.astromancy.databinding.AnswerFragBinding
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,7 +26,11 @@ class TarotAnswer:Fragment(R.layout.answer_frag) {
                 val repo = TarotRepository()
                 val response = repo.getTarotAnswer()
                 withContext(Dispatchers.Main) {
-                    binding.tarotAnswer.text = "${response}"
+                    binding.tarotYesNo.text = "${response?.data?.yesno}"
+                    binding.tarotCardName.text ="${response?.data?.card}"
+                    binding.tarotAnswer.text = "${response?.data?.result}"
+                    Picasso.get().load("${response?.data?.cardImage}").into(binding.tarotImg)
+
                 }
             }
         }
