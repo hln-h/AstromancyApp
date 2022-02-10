@@ -37,11 +37,10 @@
         android:fontFamily="@font/quintessential"
         android:text="Ask a question"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goBack_btn"
-        android:textColor="@color/sandyOrange"/>
+        android:textColor="@color/lavander"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/askQuestion_input"
@@ -49,9 +48,20 @@
         android:layout_height="100dp"
         android:layout_margin="30dp"
         android:fontFamily="@font/rajdhani"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/askAQuestion_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/tarot_logo" />
+
+    <ImageView
+        android:id="@+id/tarot_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/tarotcards"
+        app:layout_constraintTop_toBottomOf="@+id/askAQuestion_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
         android:id="@+id/ask_btn"
