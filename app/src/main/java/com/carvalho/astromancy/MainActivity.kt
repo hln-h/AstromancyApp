@@ -19,12 +19,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+//        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         loadButtons()
+
+
 
     }
 
@@ -83,22 +85,4 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-//    fun loadHoroscopeTomorrow(starsign: String, day: String) {
-//        val transaction = supportFragmentManager.beginTransaction()
-//        val horoscopeTomorrow = TomorrowHoroscopeFragment(starsign, day)
-//        val mainLayoutId = R.id.fragment_container
-//        transaction.add(mainLayoutId, horoscopeTomorrow, "horoscopeTomorrow")
-//        transaction.commit()
-//    }
-//
-//    fun loadHoroscopeYesterday(starsign: String, day: String) {
-//        val transaction = supportFragmentManager.beginTransaction()
-//        val horoscopeYesterday = YesterdayHoroscopeFragment(starsign, day)
-//        val mainLayoutId = R.id.fragment_container
-//        transaction.add(mainLayoutId, horoscopeYesterday, "horoscopeYesterday")
-//        transaction.commit()
-//
-//    }
-
-//TEST
 }
