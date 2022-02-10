@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,39 +7,44 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/backgroundAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets3.lottiefiles.com/packages/lf20_Aerz0y.json" />
+    <ImageButton
+        android:id="@+id/goHome_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/goHome_btn"
-            android:layout_width="39dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/ic_baseline_home_24"
-            android:background="@android:color/transparent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
         <ImageButton
             android:id="@+id/goBack_btn"
-            android:layout_width="39dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_arrow_back_24"
             android:background="@android:color/transparent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/goHome_btn"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
             />
 
 
 
 
-    </LinearLayout>
+
 
 <com.google.android.material.tabs.TabLayout
     android:id="@+id/tabLayout"
@@ -49,12 +54,22 @@
     app:tabIconTint="@color/white"
     app:tabIndicatorColor="@color/celeste1"
     app:tabSelectedTextColor="@color/cream"
-    app:tabTextColor="#555454" />
+    app:tabTextColor="#555454"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/goHome_btn"
+    app:layout_constraintBottom_toTopOf="@id/pager"
+    />
 
 
     <androidx.viewpager2.widget.ViewPager2
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
