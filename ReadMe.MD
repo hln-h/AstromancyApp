@@ -1,7 +1,7 @@
 #ASTROMANCY
 
 - Esoteric app featuring a daily horoscope and a yes/no question and answer tarot
-- Using 8 screens and 6 fragments*
+- Using 8 screens and 6 fragments
 
 ##Astromancy App
 ###Screenshots of the app
@@ -11,7 +11,15 @@
 ![Tarot Question](TarotAsk.png)
 ![Tarot Answer Page](TarotAnswer.png)
 
+##TECHNOLOGIES
 
+- Android studio
+- Retrofit
+- Coroutine
+- Framer  
+- Picasso
+- Lottie
+- Canva
 
 ##ENDPOINTS
 ###Horoscope
@@ -33,6 +41,8 @@ With this post we're retrieving:
 - Card Name
 - **YES** or **NO** answer
 - A description of the meaning of the card
+
+
 
 
 
