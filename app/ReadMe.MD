@@ -4,6 +4,12 @@
 - Using 8 screens and 6 fragments*
 
 ##Astromancy App
+###Screenshots of the app
+![Main Page](HomePage.png)
+![Horoscope main page](HoroscopeMain.png)
+![Horoscope Today](HoroscopeToday.png)
+![Tarot Question](TarotAsk.png)
+![Tarot Answer Page](TarotAnswer.png)
 
 
 
