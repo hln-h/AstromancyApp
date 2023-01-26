@@ -36,3 +36,6 @@ With this post we're retrieving:
 - Card Name
 - **YES** or **NO** answer
 - A description of the meaning of the card
+
+This is a student project that was created by @hln-h @berovikak at CodeOp, an Android bootcamp in Barcelona.
+
