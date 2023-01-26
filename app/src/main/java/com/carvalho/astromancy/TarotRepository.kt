@@ -31,7 +31,7 @@ class TarotRepository {
     } //DO NOT DELETE ANYTHING FROM GETREQUESTBODY
 
     fun getTarotAnswer(): ResponseRootModel? {
-        val request = TarotRequestModel("8bf1211fd4b7b94528899de0a43b9fb3")
+        val request = TarotRequestModel("API_KEY") //Add own key
         val response = service.getDailyTarot(getRequestBody()).execute()
         return if (response.isSuccessful) {
             response.body()

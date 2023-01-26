@@ -13,5 +13,3 @@ interface TarotService {
 }
 
 
-//api key 8bf1211fd4b7b94528899de0a43b9fb3
-//test this our

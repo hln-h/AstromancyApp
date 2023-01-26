@@ -1,6 +1,5 @@
 package com.carvalho.astromancy
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.carvalho.astromancy.databinding.ActivityMainBinding
@@ -9,7 +8,6 @@ import com.carvalho.astromancy.tarotFrags.TarotQuestion
 
 
 class MainActivity : AppCompatActivity() {
-//    private var binding: ActivityMainBinding? = null
 
     private lateinit var binding: ActivityMainBinding
 
@@ -19,10 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setSupportActionBar(binding.toolbar)
-
-//        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-//        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         loadButtons()
 
@@ -51,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         transaction.add(mainLayoutId, horoscopeMain, "horoscopeMain")
         transaction.addToBackStack("horoscopeMain")
         transaction.commit()
-        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
 
